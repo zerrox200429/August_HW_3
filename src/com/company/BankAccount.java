@@ -2,7 +2,7 @@ package com.company;
 
 
 public class BankAccount {
-    double wallet = 10000;
+    double wallet;
 
 
 
@@ -16,7 +16,7 @@ public class BankAccount {
 
     }
 
-    public void withDraw(double sum) throws Exception {
+    public void withDraw(double sum) throws LimitException {
         wallet = wallet - sum;
 
         if (wallet < 0)
